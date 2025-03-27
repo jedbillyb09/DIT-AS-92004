@@ -6,7 +6,6 @@ while True:
     else:
         print("Invalid input. Please enter a your name.")
 
-
 # Age input with validation
 while True:
     try:
@@ -24,22 +23,24 @@ if age < 12:
 if age > 17:
     print("Sorry, you must be 17 or younger to participate.")
 
+# Blank line
 print()
 
-#Choose an activity list input
+# Activity list
 activity_list = [
     'Music Jam Session (2 hours, easy, $5 fee)',
     'Science Experiments Lab (3 hours, moderate, $10 fee)',
     'Sports Leadership Training (4 hours, challenging, $12 fee)'
 ]
 
+# Choose list print
 print('Choose an activity: ')
 print(f'1. {activity_list[0]}')
 print(f'2. {activity_list[1]}')
 print(f'3. {activity_list[2]}')
 
 
-# Validating Activity input
+# Activity input with validation
 while True:
     try:
         chosen_activity = int(input("Enter the number of your chosen activity: "))
@@ -51,7 +52,7 @@ while True:
         print("Invalid input. Please enter a valid number.")
 
 
-#Chosen activity fee
+# Chosen activity fee calculation
 if chosen_activity == 1:
     activity_fee = 5
 elif chosen_activity == 2:
@@ -59,12 +60,13 @@ elif chosen_activity == 2:
 elif chosen_activity == 3:
     activity_fee = 12
 
-
+# Blank line
 print()
 
-#Meal options list input
+# Meal options list
 meal_options = ['Standard', 'Vegetarian', 'Dairy-free', 'Gluten-free','No meal']
 
+# Meal options list print
 print('Choose a meal option: ')
 print(f'1. {meal_options[0]}')
 print(f'2. {meal_options[1]}')
@@ -72,7 +74,7 @@ print(f'3. {meal_options[2]}')
 print(f'4. {meal_options[3]}')
 print(f'5. {meal_options[4]}')
 
-# Validating Meal input
+# Meal input with validation
 while True:
     try:
         chosen_meal = int(input("Enter the number of your chosen meal: "))
@@ -83,17 +85,17 @@ while True:
     except ValueError:
         print("Invalid input. Please enter a valid number.")
 
-#Chosen meal fee
+# Chosen meal fee calculation
 if chosen_meal == 1 or chosen_meal == 2 or chosen_meal == 3 or chosen_meal == 4: 
     meal_fee = 7
 else:
     meal_fee = 0
 
-#Total fee
+# Total fee calculation
 total_fee = activity_fee + meal_fee
 
-
+# Blank line
 print()
 
-#output
+# Output
 print(f'{name}, aged {age}, has chosen "{activity_list[chosen_activity - 1]}", meal option: "{meal_options[chosen_meal - 1]}". The total fee is ${total_fee}.')
