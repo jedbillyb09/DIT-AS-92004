@@ -17,7 +17,7 @@ while True:
     except ValueError:
         print("Invalid input. Please enter a valid number for your age.")
 
-#Age validation
+# Age validation
 if age < 12:
     print("Sorry, you must be 12 or older to participate.")
 if age > 17:
