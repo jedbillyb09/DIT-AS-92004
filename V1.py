@@ -18,8 +18,13 @@ while True:
     except ValueError:
         print("Invalid input. Please enter a valid number for your age.")
 
+#Age validation
+if age < 12:
+    print("Sorry, you must be 12 or older to participate.")
+if age > 17:
+    print("Sorry, you must be 17 or younger to participate.")
 
-
+print()
 
 #Choose an activity list input
 activity_list = [
@@ -55,6 +60,8 @@ elif chosen_activity == 3:
     activity_fee = 12
 
 
+print()
+
 #Meal options list input
 meal_options = ['Standard', 'Vegetarian', 'Dairy-free', 'Gluten-free','No meal']
 
@@ -84,6 +91,9 @@ else:
 
 #Total fee
 total_fee = activity_fee + meal_fee
+
+
+print()
 
 #output
 print(f'{name}, aged {age}, has chosen "{activity_list[chosen_activity - 1]}", meal option: "{meal_options[chosen_meal - 1]}". The total fee is ${total_fee}.')
