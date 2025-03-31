@@ -20,8 +20,10 @@ while True:
 # Age validation
 if age < 12:
     print("Sorry, you must be 12 or older to participate.")
+    exit()
 if age > 17:
     print("Sorry, you must be 17 or younger to participate.")
+    exit()
 
 # Blank line
 print()
