@@ -1,69 +1,69 @@
-# Name subroutine
-def name():
-    # Name input with validation
-    while True:
-        name = input("Enter your name: ")
-        if len(name) > 0:
+# Name input with validation
+while True:
+    name = input("Enter your name: ")
+    if len(name) > 0:
+        break
+    else:
+        print("Invalid input. Please enter a your name.")
+
+
+# Age input with validation
+while True:
+    try:
+        age = int(input(f"Hi {name}, please enter your age: "))
+        if age > 0:
             break
         else:
-            print("Invalid input. Please enter a your name.")
+            print("Invalid input. Age must be greater than 0.")
+    except ValueError:
+        print("Invalid input. Please enter a valid number for your age.")
 
-# Age subroutine
-def age():
-    # Age input with validation
-    while True:
-        try:
-            age = int(input(f"Hi {name}, please enter your age: "))
-            if age > 0:
-                break
-            else:
-                print("Invalid input. Age must be greater than 0.")
-        except ValueError:
-            print("Invalid input. Please enter a valid number for your age.")
-
-    # Age validation
-    if age < 12:
-        print("Sorry, you must be 12 or older to participate.")
-        exit()
-    if age > 17:
-        print("Sorry, you must be 17 or younger to participate.")
-        exit()
+# Age validation
+if age < 12:
+    print("Sorry, you must be 12 or older to participate.")
+    exit()
+if age > 17:
+    print("Sorry, you must be 17 or younger to participate.")
+    exit()
 
 # Blank line
 print()
 
-# Activity list
-activity_list = [
-    'Music Jam Session (2 hours, easy, $5 fee)',
-    'Science Experiments Lab (3 hours, moderate, $10 fee)',
-    'Sports Leadership Training (4 hours, challenging, $12 fee)'
-]
+# Activity subroutine
+def sub_chosen_activity():
+    # Activity list
+    activity_list = [
+        'Music Jam Session (2 hours, easy, $5 fee)',
+        'Science Experiments Lab (3 hours, moderate, $10 fee)',
+        'Sports Leadership Training (4 hours, challenging, $12 fee)'
+    ]
 
-# Choose list print
-print('Choose an activity: ')
-print(f'1. {activity_list[0]}')
-print(f'2. {activity_list[1]}')
-print(f'3. {activity_list[2]}')
+    # Choose list print
+    print('Choose an activity: ')
+    print(f'1. {activity_list[0]}')
+    print(f'2. {activity_list[1]}')
+    print(f'3. {activity_list[2]}')
 
-# Activity input with validation
-while True:
-    try:
-        chosen_activity = int(input("Enter the number of your chosen activity: "))
-        if chosen_activity in [1, 2, 3]:
-            break
-        else:
-            print("Invalid input. Please enter a number between 1 and 3.")
-    except ValueError:
-        print("Invalid input. Please enter a valid number.")
+    # Activity input with validation
+    while True:
+        try:
+            chosen_activity = int(input("Enter the number of your chosen activity: "))
+            if chosen_activity in [1, 2, 3]:
+                break
+            else:
+                print("Invalid input. Please enter a number between 1 and 3.")
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
 
-
-# Chosen activity fee calculation
-if chosen_activity == 1:
-    activity_fee = 5
-elif chosen_activity == 2:
-    activity_fee = 10
-elif chosen_activity == 3:
-    activity_fee = 12
+# Activity fee subroutine
+def sub_activity_fee():
+    # Chosen activity fee calculation
+    if chosen_activity == 1:
+        activity_fee = 5
+    elif chosen_activity == 2:
+        activity_fee = 10
+    elif chosen_activity == 3:
+        activity_fee = 12
 
 # Chosen activity duration calculation
 if chosen_activity == 1:
