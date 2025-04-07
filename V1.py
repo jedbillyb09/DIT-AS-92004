@@ -62,6 +62,32 @@ elif chosen_activity == 2:
 elif chosen_activity == 3:
     activity_fee = 12
 
+# Chosen activity duration calculation
+if chosen_activity == 1:
+    activity_duration = 2
+
+elif chosen_activity == 2:
+    activity_duration = 3
+
+elif chosen_activity == 3:
+    activity_duration = 4
+
+# Chosen activity name calculation
+if chosen_activity == 1:
+    activity_name = 'Music Jam Session'
+elif chosen_activity == 2:
+    activity_name = 'Science Experiments Lab'
+elif chosen_activity == 3:
+    activity_name = 'Sports Leadership Training'
+
+# Chosen activity difficulty calculation
+if chosen_activity == 1:
+    activity_difficulty = 'easy'
+elif chosen_activity == 2:
+    activity_difficulty = 'moderate'
+elif chosen_activity == 3:
+    activity_difficulty = 'challenging'
+
 # Blank line
 print()
 
@@ -100,10 +126,14 @@ total_fee = activity_fee + meal_fee
 print()
 
 # Output
-print(f'{name}, aged {age}, has chosen "{activity_list[chosen_activity - 1]}", meal option: "{meal_options[chosen_meal - 1]}". The total fee is ${total_fee}.')
-final_decision = input(f"Do you want to proceed with the payment of ${activity_fee} (yes/no):")
+print(f'{name}, Aged {age}, has chosen the {activity_name} activity, which is {activity_difficulty} and lasts for {activity_duration} hours. You have chosen the {meal_options[chosen_meal - 1]} meal option. The total fee is ${total_fee}.')
+
+# final decision input and output
+final_decision = input(f"Do you want to proceed with the payment of ${total_fee} (yes/no): ")
+
 if final_decision.lower() == 'yes' or final_decision.lower() == "y":
-    print("Payment successful!")
+    print("Payment accepted. Thank you!")
+    exit()
 else:
     print("Payment cancelled.")
     exit()
