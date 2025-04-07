@@ -1,29 +1,33 @@
-# Name input with validation
-while True:
-    name = input("Enter your name: ")
-    if len(name) > 0:
-        break
-    else:
-        print("Invalid input. Please enter a your name.")
-
-# Age input with validation
-while True:
-    try:
-        age = int(input(f"Hi {name}, please enter your age: "))
-        if age > 0:
+# Name subroutine
+def name():
+    # Name input with validation
+    while True:
+        name = input("Enter your name: ")
+        if len(name) > 0:
             break
         else:
-            print("Invalid input. Age must be greater than 0.")
-    except ValueError:
-        print("Invalid input. Please enter a valid number for your age.")
+            print("Invalid input. Please enter a your name.")
 
-# Age validation
-if age < 12:
-    print("Sorry, you must be 12 or older to participate.")
-    exit()
-if age > 17:
-    print("Sorry, you must be 17 or younger to participate.")
-    exit()
+# Age subroutine
+def age():
+    # Age input with validation
+    while True:
+        try:
+            age = int(input(f"Hi {name}, please enter your age: "))
+            if age > 0:
+                break
+            else:
+                print("Invalid input. Age must be greater than 0.")
+        except ValueError:
+            print("Invalid input. Please enter a valid number for your age.")
+
+    # Age validation
+    if age < 12:
+        print("Sorry, you must be 12 or older to participate.")
+        exit()
+    if age > 17:
+        print("Sorry, you must be 17 or younger to participate.")
+        exit()
 
 # Blank line
 print()
@@ -40,7 +44,6 @@ print('Choose an activity: ')
 print(f'1. {activity_list[0]}')
 print(f'2. {activity_list[1]}')
 print(f'3. {activity_list[2]}')
-
 
 # Activity input with validation
 while True:
