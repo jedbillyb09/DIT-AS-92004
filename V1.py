@@ -101,3 +101,9 @@ print()
 
 # Output
 print(f'{name}, aged {age}, has chosen "{activity_list[chosen_activity - 1]}", meal option: "{meal_options[chosen_meal - 1]}". The total fee is ${total_fee}.')
+final_decision = input(f"Do you want to proceed with the payment of ${activity_fee} (yes/no):")
+if final_decision.lower() == 'yes' or final_decision.lower() == "y":
+    print("Payment successful!")
+else:
+    print("Payment cancelled.")
+    exit()
