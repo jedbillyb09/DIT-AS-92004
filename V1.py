@@ -1,16 +1,20 @@
-# Name subroutine
+# ==========================
+# Section 1: Name Input
+# ==========================
 def get_name():
     while True:
         sub_name = input("Enter your name: ")
         if len(sub_name) > 0:
-            return sub_name  # Return the input value
+            return sub_name 
         else:
             print("Invalid input. Please enter your name.")
 
 # Subroutine to name variable
 name = get_name()
 
-# Age input with validation
+# ==========================
+# Section 2: Age Input and Validation
+# ==========================
 def get_age():
     while True:
         try:
@@ -36,6 +40,9 @@ if age > 17:
 # Blank line
 print()
 
+# ==========================
+# Section 3: Activity Selection
+# ==========================
 
 # Activity list
 activity_list = [
@@ -98,6 +105,10 @@ elif chosen_activity == 3:
 # Blank line
 print()
 
+# ==========================
+# Section 4: Meal Selection
+# ==========================
+
 # Meal options list
 meal_options = ['Standard', 'Vegetarian', 'Dairy-free', 'Gluten-free','No meal']
 
@@ -131,6 +142,10 @@ total_fee = activity_fee + meal_fee
 
 # Blank line
 print()
+
+# ==========================
+# Section 5: Summary and Final Decision
+# ==========================
 
 # Output
 print(f'{name}, Aged {age}, has chosen the {activity_name} activity, which is {activity_difficulty} and lasts for {activity_duration} hours. You have chosen the {meal_options[chosen_meal - 1]} meal option. The total fee is ${total_fee}.')
