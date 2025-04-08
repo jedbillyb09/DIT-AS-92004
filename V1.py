@@ -60,41 +60,43 @@ def choose_activity(chosen_activity):
         except ValueError:
             print("Invalid input. Please enter a valid number.")
 
-def sub_chosen_activity_fee(chosen_activity):
-    # Chosen activity fee calculation
-    if chosen_activity == 1:
-        activity_fee = 5
-    elif chosen_activity == 2:
-        activity_fee = 10
-    elif chosen_activity == 3:
-        activity_fee = 12
 
-def sub_chosen_activity_duration(chosen_activity):
-    # Chosen activity duration calculation
-    if chosen_activity == 1:
-        activity_duration = 2
-    elif chosen_activity == 2:
-        activity_duration = 3
-    elif chosen_activity == 3:
-        activity_duration = 4
 
-def sub_chosen_activity_name(chosen_activity):
-    # Chosen activity name calculation
-    if chosen_activity == 1:
-        activity_name = 'Music Jam Session'
-    elif chosen_activity == 2:
-        activity_name = 'Science Experiments Lab'
-    elif chosen_activity == 3:
-        activity_name = 'Sports Leadership Training'
+ # Chosen activity fee calculation
 
-def sub_chosen_activity_difficulty(chosen_activity):
-    # Chosen activity difficulty calculation
-    if chosen_activity == 1:
-        activity_difficulty = 'easy'
-    elif chosen_activity == 2:
-        activity_difficulty = 'moderate'
-    elif chosen_activity == 3:
-        activity_difficulty = 'challenging'
+chosen_activity = choose_activity()
+
+# Chosen activity fee calculation
+if chosen_activity == 1:
+    activity_fee = 5
+elif chosen_activity == 2:
+    activity_fee = 10
+elif chosen_activity == 3:
+    activity_fee = 12
+
+# Chosen activity duration calculation
+if chosen_activity == 1:
+    activity_duration = 2
+elif chosen_activity == 2:
+    activity_duration = 3
+elif chosen_activity == 3:
+    activity_duration = 4
+
+# Chosen activity name calculation
+if chosen_activity == 1:
+    activity_name = 'Music Jam Session'
+elif chosen_activity == 2:
+    activity_name = 'Science Experiments Lab'
+elif chosen_activity == 3:
+    activity_name = 'Sports Leadership Training'
+
+# Chosen activity difficulty calculation
+if chosen_activity == 1:
+    activity_difficulty = 'easy'
+elif chosen_activity == 2:
+    activity_difficulty = 'moderate'
+elif chosen_activity == 3:
+    activity_difficulty = 'challenging'
 
 # Blank line
 print()
@@ -129,6 +131,8 @@ def chosse_meal():
         except ValueError:
             print("Invalid input. Please enter a valid number.")
 
+chosen_meal = chosse_meal()
+
 # Chosen meal fee calculation
 if chosen_meal == 1 or chosen_meal == 2 or chosen_meal == 3 or chosen_meal == 4: 
     meal_fee = 7
@@ -144,6 +148,9 @@ print()
 # ==========================
 # Section 5: Summary and Final Decision
 # ==========================
+
+name = get_name()
+age = get_age(name)
 
 # Output
 print(f'{name}, Aged {age}, has chosen the {activity_name} activity, which is {activity_difficulty} and lasts for {activity_duration} hours. You have chosen the {meal_options[chosen_meal - 1]} meal option. The total fee is ${total_fee}.')
